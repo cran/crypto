@@ -1,4 +1,4 @@
-#' @title Get current cryptocurrency prices
+#' @title Get current crypto currency prices
 #' @description This will retrieve the current market prices from CoinMarketCap. Data gets refreshed every 5 minutes.
 #' @param coin Token name, default is all, Default: NULL
 #' @param limit Return top n coins, default is all, Default: 0
@@ -24,4 +24,5 @@ cols   <- c(4:14)
 prices[, cols]   <- apply(prices[, cols], 2, function(x) replace(x, is.na(x), 0))
 prices[, cols]   <- suppressWarnings(apply(prices[, cols], 2, function(x) as.numeric(x)))
 prices[, 15]     <- as.POSIXct(as.numeric(prices[, 15]), origin = "1970-01-01")
+return(prices)
 }
