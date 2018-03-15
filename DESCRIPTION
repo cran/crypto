@@ -2,7 +2,7 @@ Package: crypto
 Type: Package
 Title: Cryptocurrency Market Data
 Description: Retrieves crypto currency current and historical information as well as information on the exchanges they are listed on. For current and historical it will retrieve the daily open, high, low and close values for all crypto currencies. This retrieves the historical market data by web scraping tables provided by 'Cryptocurrency Market Capitalizations' <https://coinmarketcap.com>.
-Version: 0.1.4
+Version: 0.1.5
 Date: 2018-03-07
 Authors@R: c(person("Jesse", "Vent",
                     role = c("aut", "cre"), 
@@ -20,7 +20,7 @@ Imports: magrittr, jsonlite, dplyr, lubridate, curl, utils, parallel,
         stats, doSNOW, tidyr
 RoxygenNote: 6.0.1
 NeedsCompilation: no
-Packaged: 2018-03-07 11:59:42 UTC; jesseimac
+Packaged: 2018-03-15 22:33:08 UTC; jesseimac
 Author: Jesse Vent [aut, cre]
 Repository: CRAN
-Date/Publication: 2018-03-07 16:11:14 UTC
+Date/Publication: 2018-03-15 22:41:39 UTC
