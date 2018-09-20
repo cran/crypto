@@ -1,6 +1,17 @@
 # Latest updates, fixes and news for the Crypto package
 ![Cran](http://cranlogs.r-pkg.org/badges/grand-total/crypto) ![Cran](http://cranlogs.r-pkg.org/badges/crypto) ![Cran](http://cranlogs.r-pkg.org/badges/last-week/crypto) ![Cran](http://cranlogs.r-pkg.org/badges/last-day/crypto) [![Rdoc](http://www.rdocumentation.org/badges/version/crypto)](http://www.rdocumentation.org/packages/crypto)
 
+### crypto minor release 1.0.3
+#### BUG FIX
+- turning off verbose mode from `crypto_history()` function
+- added additional check in `encoding.R` to not change locale for existing windows UTF-8 encoding
+
+#### ENHANCEMENTS
+- functions will now accept a character vector of coin names
+- enhanced coin name handling
+- cleaned up warning messages of deprecation
+- added stop function for coins without data
+- removed printing of empty string
 ### crypto major release 1.0.0
 #### NEW FUNCTIONS
 - **daily_market()** Retrieve timeseries market data for specific token perfect for visualisation.
