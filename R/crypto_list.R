@@ -6,9 +6,9 @@
 #' CoinMarketCap and creates URLS for \code{scraper()} to use.
 #'
 #' @param coin Name, symbol or slug of crypto currency
-#' @param ... No arguments, return all coins
 #' @param start_date Start date to retrieve data from, format yyyymmdd
 #' @param end_date Start date to retrieve data from, format yyyymmdd
+#' @param coin_list 'api', 'static' or NULL
 #'
 #' @return Crypto currency historic OHLC market data in a dataframe:
 #'   \item{symbol}{Coin symbol (not-unique)}
@@ -20,36 +20,35 @@
 #'
 #' Required dependency that is used in function call \code{getCoins()}.
 #' @importFrom tibble tibble
+#' @importFrom jsonlite fromJSON
+#' @importFrom lubridate today
+#'
 #' @examples
-#' # return specific coin
-#'
-#' coin <- "kin"
-#' coins <- listCoins(coin)
-#'
 #' \dontrun{
+#' coin <- "kin"
+#' coins <- crypto_list(coin)
 #'
 #' # return all coins
-#' coin_list <- listCoins()
+#' coin_list <- crypto_list()
 #' }
 #'
-#' @name listCoins
+#' @name crypto_list
 #'
 #' @export
 #'
-listCoins <-
-  crypto_list <-
-  function(coin         = NULL,
-           start_date   = NULL,
-           end_date     = NULL) {
-    ifelse(as.character(match.call()[[1]]) == "listCoins",
-           warning(
-             "DEPRECATED: Please use crypto_list() instead of listCoins().",
-             immediate.       = TRUE,
-             call. = FALSE
-           ),
-           shh <- "")
-    json   <- "https://s2.coinmarketcap.com/generated/search/quick_search.json"
-    coins  <- jsonlite::read_json(json, simplifyVector = TRUE)
+  crypto_list <- function(coin = NULL,
+           start_date = NULL,
+           end_date = NULL,
+           coin_list = NULL) {
+    if (is.null(coin_list)) {
+      json   <- "https://s2.coinmarketcap.com/generated/search/quick_search.json"
+      coins  <- jsonlite::fromJSON(json)
+    } else {
+      ifelse(coin_list == "api",
+             coins <- get_coinlist_api(),
+             coins <- get_coinlist_static())
+    }
+
     if (!is.null(coin)) {
     name   <- coins$name
     slug   <- coins$slug
@@ -72,10 +71,7 @@ listCoins <-
       )
     if (is.null(start_date)) { start_date <- "20130428" }
     if (is.null(end_date)) { end_date <- gsub("-", "", lubridate::today()) }
-    exchangeurl <-
-      paste0("https://coinmarketcap.com/currencies/",
-             coins$slug,
-             "/#markets")
+    exchangeurl <- paste0("https://coinmarketcap.com/currencies/", coins$slug, "/#markets")
     historyurl <-
       paste0(
         "https://coinmarketcap.com/currencies/",
@@ -95,8 +91,3 @@ listCoins <-
     coins$rank         <- as.numeric(coins$rank)
     return(coins)
   }
-
-
-#' @export
-#' @rdname listCoins
-crypto_list <- listCoins

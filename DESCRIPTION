@@ -1,9 +1,9 @@
 Package: crypto
 Type: Package
-Title: Cryptocurrency Market Data
+Title: Crypto Currency Market Data
 Description: Retrieves crypto currency current and historical information as well as information on the exchanges they are listed on. For current and historical it will retrieve the daily open, high, low and close values for all crypto currencies. This retrieves the historical market data by web scraping tables provided by 'Cryptocurrency Market Capitalizations' <https://coinmarketcap.com>.
-Version: 1.0.3
-Date: 2018-09-20
+Version: 1.1.0
+Date: 2018-12-13
 Authors@R: c(person("Jesse", "Vent",
                     role = c("aut", "cre"), 
                     email = "cryptopackage@icloud.com")
@@ -12,15 +12,18 @@ Maintainer: Jesse Vent <cryptopackage@icloud.com>
 URL: https://github.com/JesseVent/crypto,
         https://CRAN.R-project.org/package=crypto
 BugReports: https://github.com/JesseVent/crypto/issues
-Depends: R (>= 3.4.0), foreach, rvest, xml2
+Depends: R (>= 3.4.0), rvest, xml2
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: magrittr, tibble, jsonlite, dplyr, lubridate, xts, curl,
-        utils, parallel, stats, doSNOW, tidyr, yaml
-RoxygenNote: 6.1.0
+Imports: dplyr, tibble, jsonlite, lubridate, xts, curl, utils, cli,
+        crayon, progress, stats, tidyr, httr, rstudioapi, keyring
+Suggests: R6
+SystemRequirements: libxml2-devel, libcurl-devel, openssl-devel,
+        libsecret-devel, libsodium-devel
+RoxygenNote: 6.1.1
 NeedsCompilation: no
-Packaged: 2018-09-20 15:39:16 UTC; jesseimac
+Packaged: 2018-12-13 10:46:58 UTC; jesseimac
 Author: Jesse Vent [aut, cre]
 Repository: CRAN
-Date/Publication: 2018-09-20 17:10:18 UTC
+Date/Publication: 2018-12-13 11:50:07 UTC
