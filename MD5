@@ -1,11 +1,11 @@
-42e6dfb9d582d53a0fd883208bccfba0 *DESCRIPTION
+68014993a5b395e0a4cb8ef9b7afc453 *DESCRIPTION
 b1a69ac9cecea3a7cbd81885d28aefe4 *LICENSE
-18cf07c33932c4b2a5fa94c47cc6faa3 *NAMESPACE
+d083b1a9f882e331b36e9e6fe5ab80b2 *NAMESPACE
 c395dfa43d21d04a8152d43c358c1911 *NEWS.md
 1e087de2e662ecb5422bc671b544ea03 *R/crypto_exchanges.R
 e7ca3bb5e421c40d072667c5a1d9d890 *R/crypto_global_markets.R
-5639b3e1556b6de4eae58946ab29863f *R/crypto_helpers.R
-59b75e72a7d64d3da939238495f8deb7 *R/crypto_history.R
+bf9debfaaf6558a234dbc3df09ed42bc *R/crypto_helpers.R
+60e630f492e4cc8a970dcccd7b53237d *R/crypto_history.R
 02f0dc68fb72fc5912350c1d3f65af24 *R/crypto_list.R
 44f6f447ad26961f612fed057585556a *R/crypto_prices.R
 dd9bf03972b84602223557b8239673d2 *R/crypto_timeseries.R
@@ -23,7 +23,7 @@ b67670912f8a78c92c5d4aae036a209d *man/crypto_prices.Rd
 02d49f6d93c1ca813426050317e2a086 *man/crypto_xts.Rd
 bcc16232b36c12c8bf65b3dc15f82a3b *man/get_coinlist_api.Rd
 30513bffe734a6b98a46f4495a3bb9bf *man/get_coinlist_static.Rd
-106d943d7982abab821f901b00b442be *man/install_keyring.Rd
+70a3ae941620adaaa7ab0238f632b384 *man/platform_locale.Rd
 44f7f11f1a718ad507f030e03f2d464a *man/replace_encoding.Rd
 b00622ad42e256cafaea15e75ac73735 *man/reset_encoding.Rd
 73102354b68f04a262db3847da932486 *man/scraper.Rd
