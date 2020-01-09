@@ -1,8 +1,8 @@
-24594bbe53709f6db1d69ffef4fc5d70 *DESCRIPTION
+be58efd3c4869999b017bb69e6f510f3 *DESCRIPTION
 b1a69ac9cecea3a7cbd81885d28aefe4 *LICENSE
-60c1ccc1f5d3af4ad1b01da57ea01880 *NAMESPACE
+75fb2e8a70d2bbff33bc0b813916b524 *NAMESPACE
 b0d5ca926478252bbc335e9852e5b2e1 *NEWS.md
-fb97f86e48be3cf163bfc777e24d8bdb *R/crypto_global_markets.R
+beb8f65a7deaefd82e8554282930569e *R/crypto_global_markets.R
 48bc80ec037e95e9b56a66112b2beb95 *R/crypto_helpers.R
 67cc1025c3805c9afd23ade7ee21b574 *R/crypto_history.R
 80c23a27f1f4212029ae8d9b45b466c8 *R/crypto_list.R
@@ -14,7 +14,7 @@ efdd86834f61e1c2aa4aa256c5758c98 *R/crypto_prices_full.R
 062fdbe9627c2ec55da76e2e46ef4210 *R/sysdata.rda
 c990eeba4009deeddce227aeb5ca69e6 *README.md
 f89715011277b900ad46deb3f7b48f4a *man/cmc_api.Rd
-8fb480cc0d60bac4e08af9552f44dd3a *man/crypto_global_market.Rd
+97559cbb8dd67748036d14b25c9f3017 *man/crypto_global_market.Rd
 61ed2692e97d6036bb8927b1fb65e687 *man/crypto_history.Rd
 0bb3083575c20402ac853e653069f1fd *man/crypto_list.Rd
 a6577a58ef4eccbdb6a8d7172056f09a *man/crypto_prices.Rd
